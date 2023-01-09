@@ -10,8 +10,8 @@ def tokenize(corpus):
         return WhitespaceTokenizer().tokenize(text)
 
 
-def generate_trigrams(tokens):
-    trigrams_ = trigrams(tokens)
+def generate_trigrams(token):
+    trigrams_ = trigrams(token)
     trigrams_list = [' '.join(x) for x in trigrams_]
     return trigrams_list
 
@@ -53,3 +53,4 @@ for i in range(10):
         sentence.append(second_word)
         first_word = first_word.split()[1] + " " + second_word
     print(" ".join(sentence))
+# test
