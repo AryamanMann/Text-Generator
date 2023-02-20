@@ -39,7 +39,7 @@ trigrams_in_corpus = generate_trigrams(list_of_tokens)
 lst = [(obj.split()[0] + ' ' + obj.split()[1], obj.split()[2]) for obj in trigrams_in_corpus]
 data = generate_dictionary(lst)
 starting_words = [word[0] for word in lst if is_starting_word(word[0])]
-for i in range(10):
+for i in range(20):
     sentence = list()
     first_word = random.choice(starting_words)
     sentence.append(first_word)
@@ -52,5 +52,4 @@ for i in range(10):
             break
         sentence.append(second_word)
         first_word = first_word.split()[1] + " " + second_word
-    print(" ".join(sentence))
-# test
+    print(str(i + 1) + ") " + " ".join(sentence))
